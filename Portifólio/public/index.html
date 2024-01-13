@@ -6,7 +6,9 @@
     <title>Ademir Júnior - Portifólio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vars.css">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="assets/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/css/brands.css" rel="stylesheet">
+    <link href="assets/css/solid.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,6 +19,12 @@
             <a href="">Contato</a>
             <button type="button">CURRÍCULO</button>
         </nav>
+        <button class="drop-btn" type="button">
+            <i class="fas fa-exclamation-circle"></i>
+        </button>
+        <div class="dropdown-content">
+            <button type="button">CURRÍCULO</button>
+        </div>
     </header>
 
     <div id="slider">
@@ -28,16 +36,15 @@
                     <img id="my-picture" src="" alt="">
                 </div>
                 <div id="about-me">
-                    <p>Meu nome é Ademir Júnior e sou Desenvolvedor Front End com alguns meses de experiência englobando estudos e projetos pessoais. Atualmente estou em busca da minha primeira vaga de emprego.</p>
+                    <p>Meu nome é Ademir Júnior e sou Desenvolvedor Front End com alguns meses de experiência, englobando estudos e projetos pessoais. Gosto muito de criar sites, bem como programar aplicações e ouvir rock!</p>
                     <br>
-                    <p>Gosto muito de criar sites, bem como programar aplicações e ouvir rock!</p>
-                    <br>
-                    <p>Aqui você poderá encontrar alguns dos meus projetos pessoais, minhas redes sociais por onde poderá entrar em contato como preferir, além de explorar todas as funcionalidades implementadas neste breve portifólio. Espero que tenha uma ótima experiência.</p>
+                    <p>Espero que tenha uma ótima experiência por aqui.</p>
                     <br>
                     <p id="talk-to-me">Fale comigo ;)</p>
                 </div>
                 <div id="go-to">
                     <div id="links">
+                        <a href=""><img class="link" alt=""></a>
                         <a href=""><img class="link" alt=""></a>
                         <a href=""><img class="link" alt=""></a>
                     </div>
@@ -47,5 +54,12 @@
         </main>
         <span class="go-to-arr"><img src="" alt=""></span>
     </div>
+    <footer>Ademir Júnior &trade; 2024</footer>
+    <nav id="mobile-nav">
+        <a href="">Sobre</a>
+        <a href="">Projetos</a>
+        <a href="">Contato</a>
+    </nav>
+    <script src="js/utils.js"></script>
 </body>
 </html>

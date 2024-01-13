@@ -1,5 +1,8 @@
 :root {
-    --main-bg-color: red;
+    --first-bg-color: red;
+    --sec-bg-color: green;
+    --third-bg-color: blue;
+    
     --v-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.515);
     --lighter-black-border: 1px solid #000;
 }
