@@ -11,54 +11,60 @@
     <link href="assets/css/solid.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <span>&lt;Ade.DEV&gt;</span>
-        <nav>
+    <div class="|">
+        <header>
+            <span>&lt;Ade.DEV&gt;</span>
+            <nav>
+                <a href="">Sobre</a>
+                <a href="">Projetos</a>
+                <a href="">Contato</a>
+        
+                <button class="download-resume" type="button" title="Resume Button"><a href="pdf/AdemirJunior_Resume.pdf" download="Currículo de Ademir Júnior" type="application/pdf">CURRÍCULO</a></button>
+            </nav>
+            <button class="drop-btn" type="button" title="Dropdown Menu Button">
+                <i class="fas fa-exclamation-circle"></i>
+            </button>
+            <div class="dropdown-content">
+                <button class="download-resume" type="button" title="Resume Button"><a href="pdf/AdemirJunior_Resume.pdf" type="application/pdf">CURRÍCULO</a></button>
+            </div>
+        </header>
+        <div id="slider">
+            <span class="go-to-arr"><<</span>
+            <main>
+                <div class="content">
+                    <div id="greeting">
+                        <div class="reveal-block">
+                            <h1 class="to-reveal-txt" id="say-hello"><span>Olá, eu <br>sou o Adê!</span></h1>
+                        </div>
+                        <img id="my-picture" src="img/my-picture.jpg" alt="">
+                    </div>
+                    <div id="about-me">
+                        <p>Meu nome é Ademir Júnior e sou Desenvolvedor Front End com alguns meses de experiência, englobando estudos e projetos pessoais. Gosto muito de criar sites, bem como programar aplicações e ouvir rock!</p>
+                        <br>
+                        <p>Espero que tenha uma ótima experiência por aqui.</p>
+                        <br>
+                        <div class="reveal-block" id="p-block">
+                            <p class="to-reveal-txt" id="talk-to-me"><span>Fale comigo =)</span></p>
+                        </div>
+                    </div>
+                    <div id="go-to">
+                        <div id="links">
+                            <a id="LinkedIn" href="https://www.linkedin.com/in/dev-ademirjunior" target="_blank" title="Social Media Link"><img class="link" src="img/icons/lkdin-black-logo.jpg" alt=""></a>
+                            <a href="https://github.com/adejuniorr" target="_blank" title="Social Media Link"><img class="link" src="img/icons/gthub-black-logo.jpg" alt=""></a>
+                        </div>
+                        <button type="button">CONTATO</button>
+                    </div>
+                </div>
+            </main>
+            <span class="go-to-arr">>></span>
+        </div>
+        <footer>Ademir Júnior &trade; 2024</footer>
+        <nav id="mobile-nav">
             <a href="">Sobre</a>
             <a href="">Projetos</a>
             <a href="">Contato</a>
-            <button type="button">CURRÍCULO</button>
         </nav>
-        <button class="drop-btn" type="button">
-            <i class="fas fa-exclamation-circle"></i>
-        </button>
-        <div class="dropdown-content">
-            <button type="button">CURRÍCULO</button>
-        </div>
-    </header>
-
-    <div id="slider">
-        <span class="go-to-arr"><img src="" alt=""></span>
-        <main>
-            <div class="content">
-                <div id="greeting">
-                    <h1 id="say-hello">Olá, eu <br>sou o Adê!</h1>
-                    <img id="my-picture" src="img/my-picture.jpg" alt="">
-                </div>
-                <div id="about-me">
-                    <p>Meu nome é Ademir Júnior e sou Desenvolvedor Front End com alguns meses de experiência, englobando estudos e projetos pessoais. Gosto muito de criar sites, bem como programar aplicações e ouvir rock!</p>
-                    <br>
-                    <p>Espero que tenha uma ótima experiência por aqui.</p>
-                    <br>
-                    <p id="talk-to-me">Fale comigo ;)</p>
-                </div>
-                <div id="go-to">
-                    <div id="links">
-                        <a id="LinkedIn" href="https://www.linkedin.com/in/dev-ademirjunior" target="_blank"><img class="link" src="img/icons/lkdin-black-logo.jpg" alt=""></a>
-                        <a href="https://github.com/adejuniorr" target="_blank"><img class="link" src="img/icons/gthub-black-logo.jpg" alt=""></a>
-                    </div>
-                    <button type="button">CONTATO</button>
-                </div>
-            </div>
-        </main>
-        <span class="go-to-arr"><img src="" alt=""></span>
     </div>
-    <footer>Ademir Júnior &trade; 2024</footer>
-    <nav id="mobile-nav">
-        <a href="">Sobre</a>
-        <a href="">Projetos</a>
-        <a href="">Contato</a>
-    </nav>
     <script src="js/utils.js"></script>
 </body>
 </html>

@@ -1,8 +1,9 @@
 :root {
-    --first-bg-color: red;
-    --sec-bg-color: green;
-    --third-bg-color: blue;
+    --green-brighter: #3bff5f;
+    --green-darker: #1ce240;
+    --purple: #ae2bff;
     
-    --v-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.515);
+    --l-text-shadow: 1px 1px 1px #000;
     --lighter-black-border: 1px solid #000;
+    --v-box-shadow: 0px 5px 7px #777;
 }

@@ -10,6 +10,10 @@
     /* border: var(--lighter-black-border); */
 }
 
+body {
+    background-image: linear-gradient(to top, #202020, #aaa);
+}
+
 .hidden {
     display: none;
 }
@@ -23,8 +27,23 @@ header {
     padding-bottom: 15px;
     font-size: 30pt;
     font-weight: bold;
+    background-color: #ae2bff;
+    color: #fff;
+    text-shadow: var(--l-text-shadow);
     border: var(--lighter-black-border);
     box-shadow: var(--v-box-shadow);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #202020;
+    text-align: center;
+    font-size: 12pt;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 nav {
@@ -35,12 +54,13 @@ nav {
 
 nav>a {
     text-decoration: none;
-    color: #000;
+    color: #3bff5f;
     padding: 5px;
     display: inline-block;
     position: relative;
     margin-right: 10px;
     font-size: 14pt;
+    font-weight: bold;
 }
 
 nav>a:after {
@@ -48,10 +68,10 @@ nav>a:after {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 1px;
+    height: 5px;
     bottom: 0;
     left: 0;
-    background-color: #000;
+    background-color: #1ce240;
     transform-origin: bottom center;
     transition: transform 0.25s ease-out;
 }
@@ -74,19 +94,35 @@ nav>a:hover:after {
 
 button {
     font-size: 12pt;
+    font-weight: bold;
     height: 45px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 3px;
     cursor: pointer;
     transition: all 300ms ease;
+    color: var(--green-brighter);
+    background-color: var(--purple);
     border: var(--lighter-black-border);
 }
 
-button:hover {
-    background-color: #000;
-    color: #fff;
+button>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--green-brighter);
+    text-shadow: var(--l-text-shadow);
 }
+
+button:hover {
+    a {
+        color: #000;
+        text-shadow: none;
+    }
+
+    color: #000;
+    background-color: #fff;
+}
+
 
 #slider {
     display: flex;
@@ -96,13 +132,26 @@ button:hover {
 .go-to-arr {
     width: 200px;
     height: 100px;
-    background-color: #000;
     cursor: pointer;
     width: 80px;
+    color: #fff;
+    font-size: 50pt;
+    font-weight: bolder;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 200ms ease-in;
+}
+.go-to-arr:hover {
+    color: var(--purple);
 }
 
 #mobile-nav {
     display: none;
+    background-color: #202020;
+    color: #fff;
+    text-shadow: var(--l-text-shadow);
+    border: var(--lighter-black-border);
 }
 
 main {
@@ -114,8 +163,9 @@ main {
     min-height: 400px;
     margin: 5% auto;
     padding: 15px;
-    border: var(--lighter-black-border);
     border-radius: 10px;
+    background-color: #fff;
+    border: var(--lighter-black-border);
     box-shadow: var(--v-box-shadow);
 }
 
@@ -125,10 +175,51 @@ main {
     align-items: center;
 }
 
+.reveal-block {
+    height: 50px;
+}
 #say-hello {
-    display: flex;
-    align-items: center;
     font-size: 3.5vw;
+    position: absolute;
+}
+.to-reveal-txt>span {
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 1.3s;
+
+}
+.to-reveal-txt:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: var(--purple);
+    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.5s;
+}
+@keyframes rev-block {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+    50% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
+@keyframes appear-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #my-picture {
@@ -138,22 +229,32 @@ main {
 }
 
 #about-me {
-    margin: 10px auto;
+    margin: 20px auto;
     font-size: 15pt;
     text-align: justify;
 }
 
+#p-block {
+    display: flex;
+    justify-content: end;
+}
 #talk-to-me {
-    margin-top: 40px;
-    text-align: right;
+    margin-top: 0px;
     font-weight: bold;
+    text-align: end;
+    position: absolute;
+}
+#talk-to-me>span {
+    animation-delay: 2s;
+}
+#talk-to-me.to-reveal-txt:after {
+    animation-delay: 1.2s;
 }
 
 #go-to {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
 }
 
 .link {
@@ -164,23 +265,28 @@ main {
     filter: invert(100%);
     transform: scale(1);
 }
+
 .link:hover {
     filter: invert(0%);
     transform: scale(1.2);
 }
 
-footer {
-    text-align: center;
-    font-size: 10pt;
+@media only screen and (max-width: 1450px) {
+    #my-picture {
+        width: 50%;
+        height: 200px;
+        border: var(--lighter-black-border);
+    }
+
 }
 
 @media only screen and (max-width: 1100px) {
     #my-picture {
-        width: 320px;
+        width: 50%;
         height: 200px;
         border: var(--lighter-black-border);
     }
-    
+
 }
 
 @media only screen and (max-width: 870px) {
@@ -192,7 +298,7 @@ footer {
         font-size: 28pt;
         font-weight: bold;
         border: var(--lighter-black-border);
-        box-shadow: var(--v-box-shadow);
+
     }
 
     nav {
@@ -223,7 +329,6 @@ footer {
         justify-content: space-evenly;
         padding-top: 15px;
         padding-bottom: 15px;
-        background-color: #bbb;
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -241,11 +346,11 @@ footer {
 
     .content {
         min-height: 400px;
-        margin: 10% auto;
+        margin: 5% auto;
         padding: 15px;
         border: var(--lighter-black-border);
         border-radius: 10px;
-        box-shadow: var(--v-box-shadow);
+
     }
 
     #greeting {
@@ -254,8 +359,6 @@ footer {
     }
 
     #say-hello {
-        display: flex;
-        align-items: center;
         font-size: 28pt;
     }
 
@@ -272,7 +375,7 @@ footer {
     }
 
     #talk-to-me {
-        margin-top: 20px;
+        margin-top: 5px;
         text-align: right;
         font-weight: bold;
     }
@@ -280,33 +383,28 @@ footer {
 
 @media only screen and (max-width: 620px) {
     #greeting {
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
     #say-hello {
-        display: flex;
-        align-items: center;
         font-size: 20pt;
     }
 
     #my-picture {
-        width: 270px;
+        width: 100%;
         height: 100px;
-        margin-top: 10px;
+        margin-top: 20px;
         border: var(--lighter-black-border);
     }
 }
 
 @media only screen and (max-width: 400px) {
     #say-hello {
-        display: flex;
-        align-items: center;
         font-size: 17pt;
     }
 
     #my-picture {
-        width: 270px;
+        width: 100%;
         height: 80px;
         margin-top: 10px;
         border: var(--lighter-black-border);
@@ -322,14 +420,16 @@ footer {
         font-size: 22pt;
         font-weight: bold;
         border: var(--lighter-black-border);
-        box-shadow: var(--v-box-shadow);
+
     }
+
     .drop-btn {
         width: 35px;
         height: 35px;
         font-size: 10pt;
     }
-    .drop-btn > i {
+
+    .drop-btn>i {
         position: relative;
         right: 5px;
     }
@@ -353,7 +453,7 @@ footer {
         align-items: center;
         margin-top: 10px;
     }
-    
+
     .link {
         width: 20px;
         height: 20px;
@@ -361,7 +461,7 @@ footer {
         transition: all 200ms ease-in-out;
         border: var(--lighter-black-border);
     }
-    
+
     .link:hover {
         background-color: #000;
         color: #fff;
@@ -380,9 +480,12 @@ footer {
 }
 
 @media only screen and (max-width: 300px) {
+    #greeting {
+        display: block;
+        justify-content: left;
+    }
+
     #say-hello {
-        display: flex;
-        align-items: center;
         font-size: 12pt;
     }
 
@@ -401,7 +504,7 @@ footer {
         font-size: 20pt;
         font-weight: bold;
         border: var(--lighter-black-border);
-        box-shadow: var(--v-box-shadow);
+
     }
 
     .drop-btn {
@@ -409,7 +512,8 @@ footer {
         height: 30px;
         font-size: 10pt;
     }
-    .drop-btn > i {
+
+    .drop-btn>i {
         position: relative;
         right: 6px;
     }
@@ -419,13 +523,12 @@ footer {
         justify-content: space-evenly;
         padding-top: 10px;
         padding-bottom: 10px;
-        background-color: #bbb;
         position: absolute;
         width: 100%;
         bottom: 0;
     }
 
-    #mobile-nav > a {
+    #mobile-nav>a {
         width: 100px;
         text-align: center;
         font-size: 10pt;
@@ -450,7 +553,7 @@ footer {
         align-items: center;
         margin-top: 10px;
     }
-    
+
     .link {
         width: 20px;
         height: 20px;
@@ -458,7 +561,7 @@ footer {
         transition: all 200ms ease-in-out;
         border: var(--lighter-black-border);
     }
-    
+
     .link:hover {
         background-color: #000;
         color: #fff;
