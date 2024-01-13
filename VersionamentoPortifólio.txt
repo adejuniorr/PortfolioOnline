@@ -1,5 +1,0 @@
-Versionamento
-
-versão 1:
-
-criar todas as páginas compotas apenas por html e css puros (sem adição de imagens, cores, links, etc.)
