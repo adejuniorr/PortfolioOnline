@@ -1,1 +1,3 @@
 Editar versão mobile mais recente
+
+Testar paleta de cores Azul
