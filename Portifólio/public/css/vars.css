@@ -1,9 +1,9 @@
 :root {
-    --green-brighter: #3bff5f;
-    --green-darker: #1ce240;
     --purple: #ae2bff;
+    --purple-lighter: #e0adff;
     
     --l-text-shadow: 1px 1px 1px #000;
     --lighter-black-border: 1px solid #000;
+    --lighter-white-border: 1px solid #fff;
     --v-box-shadow: 0px 5px 7px #777;
 }
