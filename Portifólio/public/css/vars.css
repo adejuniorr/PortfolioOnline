@@ -1,7 +1,11 @@
 :root {
+    --black-1: #202020;
+    
     --purple: #ae2bff;
     --purple-lighter: #e0adff;
-    
+
+    --cyan-1: cyan;
+
     --l-text-shadow: 1px 1px 1px #000;
     --lighter-black-border: 1px solid #000;
     --lighter-white-border: 1px solid #fff;
