@@ -1,12 +1,16 @@
 :root {
-    --black-1: #202020;
-    
+    /* colors */
     --purple: #ae2bff;
     --purple-lighter: #e0adff;
+    --black-2: #151515;
+    --black-3: #202020;
+    --red-1: #dd0000;
+    --red-2: #950000;
+    --cyan-1: #00cede;
+    --cyan-2: #009595;
 
-    --cyan-1: cyan;
-
-    --l-text-shadow: 1px 1px 1px #000;
+    --l-text-shadow: 2px 2px 2px #950000;
+    --r-text-shadow: -2px 2px 2px #950000;
     --lighter-black-border: 1px solid #000;
     --lighter-white-border: 1px solid #fff;
     --v-box-shadow: 0px 5px 7px #777;
