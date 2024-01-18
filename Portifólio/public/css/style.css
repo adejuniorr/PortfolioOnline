@@ -2,7 +2,7 @@
 
 @charset 'UTF-8';
 
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@700&family=Rajdhani&family=Sansita+Swashed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@700&family=Rajdhani:wght@400;600;700&family=Sansita+Swashed:wght@700&display=swap');
 
 /* ESTILIZAÇÃO */
 
@@ -42,9 +42,13 @@ header {
 header h1 {
     color: var(--cyan-1);
     text-shadow: var(--r-text-shadow);
+    font-family: 'Sansita Swashed', system-ui;
+    font-size: 3vw;
+    cursor: context-menu;
+    position: relative;
 }
 
-#format-a1, #format-a2, #format-a3 {
+#format-a1, #format-a2, #format-a3, #format-a4 {
     text-decoration: none;
     color: #fff;
     padding: 5px;
@@ -89,7 +93,7 @@ nav > a:hover:after {
     display: none;
 }
 
-button {
+.header-btn, .page-btn {
     font-size: 14pt;
     font-weight: bold;
     height: 45px;
@@ -109,15 +113,8 @@ button {
     color: var(--green-brighter);
 }
 
-button:hover, .card-body > a:hover  {
-    a {
-        color: #000;
-        text-shadow: none;
-    }
-
-    color: #000;
-    background-color: #fff;
-    border: var(--lighter-black-border);
+.header-btn:hover, .page-btn:hover {
+    background-color: var(--black-3);
 }
 
 /* CONTEÚDO PRINCIPAL */
@@ -141,21 +138,40 @@ button:hover, .card-body > a:hover  {
 
 /* PARTE I */
 
-#about-me, #my-projects, #contact {
+#first-page, #about-me, #my-projects, #contact {
     color: #eee;
     text-align: justify;
     font-family: 'Rajdhani', sans-serif;
+}
+
+#first-page-content {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#first-page-content h1 {
+    font-size: 7em;
+}
+
+#first-page-content h2 {
+    font-size: 3.5vw;
 }
 
 .top-txt {
     display: flex;
     flex-direction: column;
     font-family: 'Changa', sans-serif;
+    text-align: left;
 }
 
-.top-txt > h1 {
+.top-txt > h1, .contact-title >h1 {
     font-size: 6vw;
     text-shadow: var(--r-text-shadow);
+    font-family: 'Changa', sans-serif;
+    cursor: context-menu;
+    color: #fff;
 }
 
 .top-txt > h1 > span {
@@ -171,7 +187,7 @@ top-txt > h2 {
 
 .block-appear {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .block-appear::after {
@@ -180,9 +196,9 @@ top-txt > h2 {
     top: 5px;
     left: 2px;
     width: inherit;
-    height: 70%;
-    background-color: red;
-    animation: blockReveal 2s 0.5s both;
+    height: 80%;
+    background-color: var(--red-1);
+    animation: blockReveal 1.5s .5s both;
 }
 
 .appear-txt {
@@ -190,7 +206,7 @@ top-txt > h2 {
     text-shadow: var(--r-text-shadow);
     font-family: 'Sansita Swashed', system-ui;
     opacity: 0;
-    animation: fadeInTxt 0.5s ease-in-out 1.5s forwards;
+    animation: fadeInTxt 0.5s ease-in-out 0.5s forwards;
 }
 
 @keyframes fadeInTxt {
@@ -203,11 +219,7 @@ top-txt > h2 {
 
 @keyframes blockReveal {
     0% {
-        width: 0;
-    }
-    50% {
         width: 100%;
-        left: 0;
     }
     100% {
         width: 0;
@@ -216,7 +228,7 @@ top-txt > h2 {
 }
 
 /* PARTE II */
-
+/* Home */
 .mid-txt {
     margin: 20px auto;
     font-size: 15pt;
@@ -229,6 +241,33 @@ top-txt > h2 {
     font-family: 'Rajdhani', sans-serif;
 }
 
+/* Sobre */
+.who {
+    background-color: #fff;
+    color: #000;
+    margin: 20px 0px;
+    font-size: 15pt;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px var(--cyan-1);
+    animation: slideDownBox 1.4s ease-in 0s forwards;
+    opacity: 0;
+}
+
+@keyframes slideDownBox {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* Projetos */
 .projects {
     display: flex;
     flex-direction: row;
@@ -237,29 +276,32 @@ top-txt > h2 {
 
 .card {
     background-color: var(--black-2);
+    width: 18rem;
 }
 
 .project-pic {
     height: 110px;
-    overflow: hidden;
-    position: relative;
 }
 
 #img-project {
     background-color: #fff;
     width: 250px;
     height: 250px;
-    position: absolute;
+    position: relative;
     top: 20px;
     left: 20px;
     cursor: pointer;
-    transition: transform 0.25s;
+    transition: transform 0.4s;
     border-radius: .4rem;
 }
 
 .project-pic:hover #img-project {
     transform: translateY(-15%);
-    
+}
+
+.card-body {
+    background-color: var(--black-2);
+    z-index: 1;
 }
 
 .card-title {
@@ -270,11 +312,16 @@ top-txt > h2 {
 
 .card-text {
     font-size: 14pt;
+    height: 100px;
 }
 
-.card-body > a {
+.card-body > div {
+    display: flex;
+    justify-content: end;
+}
+
+.card-body > div > a {
     position: relative;
-    left: 140px;
     padding-left: 25px;
     padding-right: 25px;
     border-radius: 3px;
@@ -286,6 +333,75 @@ top-txt > h2 {
     border: var(--lighter-white-border);
 }
 
+.card-body > div > a:hover  {
+    background-color: var(--black-3);
+    border: var(--lighter-white-border);
+}
+
+/* Contato */
+.contact-title h1 {
+    font-size:4.2vw;
+}
+
+.contact-wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    margin-top: 20px;
+}
+
+#left-side-contact, #right-side-contact{
+    background-color: var(--black-2);
+    width: 480px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+#left-side-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-link {
+    padding: 35px;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.contact-link > i, .contact-link > a {
+    text-decoration: none;
+    color: var(--cyan-1);
+    transition: all 200ms ease-in-out;
+}
+
+.contact-link:hover * {
+    transform: scale(1.1);
+}
+
+#right-side-contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    font-size: 1vw;
+    color: #fff;
+}
+
+.e-input, #e-content {
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 5px;
+    outline: none;
+    transition: all 200ms ease-in-out;
+}
+
+.e-input:focus, #e-content:focus {
+    box-shadow: 0px 0px 10px var(--cyan-1);
+}
+
 /* PARTE III */
 
 .bottom-txt {
@@ -294,9 +410,7 @@ top-txt > h2 {
     align-items: center;
 }
 
-.link {/* 
-    width: 80px;
-    height: 40px; */
+.link {
     font-size: 26pt;
     color: var(--cyan-1);
     margin: 0 5px;

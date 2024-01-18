@@ -1,71 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Ademir Júnior - Portifólio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vars.css">
     <link href="assets/css/fontawesome.css" rel="stylesheet">
     <link href="assets/css/brands.css" rel="stylesheet">
     <link href="assets/css/solid.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <h1><span>&lt;/Ade.DEV&gt;</span></h1>
+        <h1><span>A</span></h1>
         <nav>
-            <a id="format-a1" href="">Sobre</a>
-            <a id="format-a2" href="">Projetos</a>
-            <a id="format-a3" href="">Contato</a>
-    
-            <button class="download-resume" type="button" title="Baixar currículo"><a id="download-resume-link" href="pdf/AdemirJunior_Resume.pdf" download="Currículo de Ademir Júnior" type="application/pdf">CURRÍCULO <i class="fas fa-download"></i></a></button>
+            <a id="format-a1" href="">Home</a>
+            <a id="format-a2" href="">Sobre</a>
+            <a id="format-a3" href="">Projetos</a>
+            <a id="format-a4" href="">Contato</a>
+
+            <button class="header-btn" type="button" title="Fazer download"><a id="download-resume-link"
+                    href="pdf/AdemirJunior_Resume.pdf" download="Currículo de Ademir Júnior"
+                    type="application/pdf">CURRÍCULO <i class="fas fa-download"></i></a></button>
         </nav>
         <div id="mobile-drop-btn">
-            <button class="drop-btn" type="button" title="Baixar currículo">
+            <button class="drop-btn" type="button">
                 <i class="fas fa-exclamation-circle"></i>
             </button>
             <div class="dropdown-content">
-                <button class="download-resume" type="button" title="Baixar currículo"><a href="pdf/AdemirJunior_Resume.pdf" type="application/pdf">CURRÍCULO <i class="fas fa-download"></i></a></button>
+                <button class="header-btn" type="button" title="Fazer download"><a href="pdf/AdemirJunior_Resume.pdf"
+                        type="application/pdf">CURRÍCULO <i class="fas fa-download"></i></a></button>
             </div>
         </div>
     </header>
-    <div id="main-slider" class="carousel slide" data-ride="carousel" data-interval="false">
-        <!-- <span class="go-to-arr"><<</span> -->
-        <!-- <main> -->
-            <!-- <div class="content"> -->
+    <main>
+        <div id="main-slider" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner" id="format-carousel">
+                <div class="carousel-item format-carousel-item " id="first-page">
+                    <div id="first-page-content">
+                        <div class="top-txt">
+                            <h1>Olá, eu sou o <span class="block-appear"><span class="appear-txt">Adê</span></span>!
+                            </h1>
+                            <h2>E sou <span class="block-appear"><span class="appear-txt">Desenvolvedor Front
+                                        End</span></span></h2>
+                        </div>
+                        <p id="talk-to-me"><span class="block-appear"><span class="appear-txt">Fale comigo
+                                    =)</span></span></p>
+                        <div class="bottom-txt">
+                            <div>
+                                <a id="LinkedIn" href="https://www.linkedin.com/in/dev-ademirjunior" target="_blank"
+                                    title="Perfil LinkedIn"><i class="fab fa-linkedin link"></i></a>
+                                <a href="https://github.com/adejuniorr" target="_blank" title="Perfil GitHub"><i
+                                        class="fab fa-github link"></i></a>
+                            </div>
+                            <button class="page-btn" id="contact-btn" type="button">CONTATO</button>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="carousel-item format-carousel-item " id="about-me">
                     <div class="top-txt">
-                        <h1>Olá, eu sou o <span class="block-appear"><span class="appear-txt">Adê</span></span>!</h1>
-                        <h2>E sou <span class="block-appear"><span class="appear-txt">Desenvolvedor Front End</span></span></h2>
+                        <h1>... <span class="block-appear"><span class="appear-txt">Quem?</span></span></h1>
                     </div>
-                    <div class="mid-txt">
-                        <p>Meu nome é Ademir Júnior e tenho alguns meses de experiência em desenvolvimento web englobando estudos e projetos pessoais. Gosto muito de criar sites, bem como programar aplicações e ouvir rock.<br><span>Espero que tenha uma ótima experiência por aqui!</span></p>
-                    
-                        <p id="talk-to-me"><span class="block-appear"><span class="appear-txt">Fale comigo =)</span></span></p>
+                    <div class="mid-txt who">
+                        <p>Meu nome é Ademir Júnior e tenho alguns meses de experiência em desenvolvimento web,
+                            englobando estudos e projetos pessoais. Ser um desenvolvedor é um algo que me cativa
+                            desde maio de 2022, quando comecei meus estudos em programação e desenvolvimento web.
+                            Então ingressei no curso de Ciência de Computação, na Universidade Estadual do Sudoeste
+                            da Bahia, e me apaixonei completamente pelo ato de programar.</p>
+
+                        <p>Para mim, a sensação de ver um código meu funcionando caminha lado a lado com a sensação
+                            de visualizar uma bela e eficiente aplicação. Por isso, adoro criar sites que agreguem
+                            uma ótima experiência ao usuário e estou sempre à procura de novas tecnologias e
+                            conhecimento para aprimorar minhas habilidades neste ofício.</p>
+                        <p style="font-weight: 700;">Em busca de me tornar um Fullstack!</p>
                     </div>
-                    <div class="bottom-txt">
-                        <div>
-                            <a id="LinkedIn" href="https://www.linkedin.com/in/dev-ademirjunior" target="_blank" title="Perfil LinkedIn"><i class="fab fa-linkedin link"></i></a>
-                            <a href="https://github.com/adejuniorr" target="_blank" title="Perfil GitHub"><i class="fab fa-github link"></i></a>
-                        </div>
-                        <button id="contact-btn" type="button" title="Infos para contato">CONTATO</button>
-                    </div>
-                </div>
-                <div class="carousel-item format-carousel-item active" id="my-projects">
+                </div> 
+                <div class="carousel-item format-carousel-item " id="my-projects">
                     <div class="top-txt">
-                        <h1><span class="block-appear"><span class="appear-txt">Projetos</span></span></h1>
+                        <h1>&lt;/<span class="block-appear"><span class="appear-txt">Projetos</span></span>&gt;</h1>
                     </div>
                     <div class="mid-txt projects">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <div class="project-pic">
                                 <div id="img-project"></div>
                             </div>
                             <div class="card-body">
-                              <h5 class="card-title">Projeto 1 <hr></h5>
-                              <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
-                              <a href="#" class="btn btn-primary">Visitar <i class="fas fa-external-link"></i></a>
+                                <h5 class="card-title">Projeto 1
+                                    <hr>
+                                </h5>
+                                <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
+                                <div><a href="#" class="btn btn-primary">Visitar <i
+                                            class="fas fa-external-link"></i></a></div>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
@@ -74,9 +104,12 @@
                                 <div id="img-project"></div>
                             </div>
                             <div class="card-body">
-                              <h5 class="card-title">Projeto 2 <hr></h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Visitar <i class="fas fa-external-link"></i></a>
+                                <h5 class="card-title">Projeto 2
+                                    <hr>
+                                </h5>
+                                <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
+                                <div><a href="#" class="btn btn-primary">Visitar <i
+                                            class="fas fa-external-link"></i></a></div>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
@@ -85,15 +118,51 @@
                                 <div id="img-project"></div>
                             </div>
                             <div class="card-body">
-                              <h5 class="card-title">Projeto 3 <hr></h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Visitar <i class="fas fa-external-link"></i></a>
+                                <h5 class="card-title">Projeto 3
+                                    <hr>
+                                </h5>
+                                <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
+                                <div><a href="#" class="btn btn-primary">Visitar <i
+                                            class="fas fa-external-link"></i></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item format-carousel-item" id="contact-me">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, commodi quos vitae repellendus praesentium minima eligendi nam, voluptatem cumque animi laborum suscipit ab voluptatum vero quidem consequatur debitis beatae magni.
+                <div class="carousel-item format-carousel-item active" id="contact-me">
+                    <div class="contact-title">
+                        <h1><span class="block-appear"><span class="appear-txt">Contact-me</span></span>!</h1>
+                    </div>
+                    <div class="contact-wrap">
+                        <div id="left-side-contact">
+                            <div class="contact-link">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/77991379957" target="_blank" title="Whatsapp">Whatsapp</a>
+                            </div>
+
+                            <div class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/dev-ademirjunior" target="_blank" title="LinkedIn">LinkedIn</a>
+                            </div>
+
+                            <div class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/adejuniorr" target="_blank" title="GitHub">GitHub</a>
+                            </div>
+                        </div>
+                        <div id="right-side-contact">
+                            <h2><span class="block-appear"><span class="appear-txt">Envie um email</span></span></h2>
+                            <form action="https://formsubmit.co/adejr0220@gmail.com" method="POST">
+                                <h5>Nome:</h5>
+                                <input type="text" name="name" class="e-input" required>
+                                <h5>Email:</h5>
+                                <input type="email" name="email" class="e-input" required>
+                                <h5>Mensagem:</h5>
+                                <textarea name="message" id="e-content" required style="resize: none; height: 60px;"></textarea>
+                                <button type="submit" class="page-btn">Send</button>
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/public/index.html">
+                           </form>
+                        </div>
+                    </div>
                 </div>
                 <a class="carousel-control-prev" id="prev-arr" href="#main-slider" role="button" data-slide="prev">
                     <span aria-hidden="true"><</span>
@@ -104,10 +173,8 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <!-- </div> -->
-        <!-- </main> -->
-        <!-- <span class="go-to-arr">>></span> -->
-    </div>
+        </div>
+    </main>
     <footer>Ademir Júnior &trade; 2024</footer>
     <nav id="mobile-nav">
         <a href="">Sobre</a>
@@ -115,9 +182,16 @@
         <a href="">Contato</a>
     </nav>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/publicUtils.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
