@@ -16,12 +16,8 @@ document.body.addEventListener("click", function (event) {
 
 function toggleDropdown() {
     let dropdown = document.getElementsByClassName('dropdown-content')[0];
-    console.log(dropdown);
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
+
+    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 }
 
 // Header's Nav links
@@ -36,10 +32,13 @@ function addClickListenerAndNavigate(id, index) {
 addClickListenerAndNavigate('Ade-DEV', 0);
 addClickListenerAndNavigate('format-a1', 0);
 addClickListenerAndNavigate('format-a1-mob', 0);
+
 addClickListenerAndNavigate('format-a2', 1);
 addClickListenerAndNavigate('format-a2-mob', 1);
+
 addClickListenerAndNavigate('format-a3', 2);
 addClickListenerAndNavigate('format-a3-mob', 2);
+
 addClickListenerAndNavigate('format-a4', 3);
 addClickListenerAndNavigate('format-a4-mob', 3);
 addClickListenerAndNavigate('contact-btn', 3);
