@@ -33,6 +33,7 @@ function addClickListenerAndNavigate(id, index) {
     });
 }
 
+addClickListenerAndNavigate('Ade-DEV', 0);
 addClickListenerAndNavigate('format-a1', 0);
 addClickListenerAndNavigate('format-a1-mob', 0);
 addClickListenerAndNavigate('format-a2', 1);
