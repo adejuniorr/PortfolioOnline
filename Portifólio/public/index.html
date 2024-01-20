@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Ademir Júnior - Portifólio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/vars.css">
     <link href="assets/css/fontawesome.css" rel="stylesheet">
     <link href="assets/css/brands.css" rel="stylesheet">
     <link href="assets/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vars.css">
+    <link rel="shortcut icon" href="img/icons/favicon-A.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -32,15 +32,16 @@
                 <i class="fas fa-exclamation-circle"></i>
             </button>
             <div class="dropdown-content">
-                <button class="header-btn" type="button" title="Fazer download"><a href="pdf/AdemirJunior_Resume.pdf"
-                        type="application/pdf">CURRÍCULO <i class="fas fa-download"></i></a></button>
+                <button class="header-btn" type="button" title="Fazer download"><a id="download-resume-link"
+                    href="pdf/AdemirJunior_Resume.pdf" download="Currículo de Ademir Júnior"
+                    type="application/pdf">CURRÍCULO <i class="fas fa-download"></i></a></button>
             </div>
         </div>
     </header>
     <main>
         <div id="main-slider" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner" id="format-carousel">
-                <div class="carousel-item format-carousel-item " id="first-page">
+                <div class="carousel-item format-carousel-item active" id="first-page">
                     <div id="first-page-content">
                         <div class="top-txt">
                             <h1>Olá, eu sou o <span class="block-appear"><span class="appear-txt">Adê</span></span>!
@@ -67,13 +68,13 @@
                         <h1>... <span class="block-appear"><span class="appear-txt">Quem?</span></span></h1>
                     </div>
                     <div class="mid-txt who">
-                        <p>Meu nome é Ademir Júnior e tenho alguns meses de experiência em desenvolvimento web,
+                        <p>&emsp;Meu nome é Ademir Júnior e tenho alguns meses de experiência em desenvolvimento web,
                             englobando estudos e projetos pessoais. Ser um desenvolvedor é um algo que me cativa
                             desde maio de 2022, quando comecei meus estudos em programação e desenvolvimento web.
                             Então ingressei no curso de Ciência de Computação, na Universidade Estadual do Sudoeste
                             da Bahia, e me apaixonei completamente pelo ato de programar.</p>
 
-                        <p>Para mim, a sensação de ver um código meu funcionando caminha lado a lado com a sensação
+                        <p>&emsp;Para mim, a sensação de ver um código meu funcionando caminha lado a lado com a sensação
                             de visualizar uma bela e eficiente aplicação. Por isso, adoro criar sites que agreguem
                             uma ótima experiência ao usuário e estou sempre à procura de novas tecnologias e
                             conhecimento para aprimorar minhas habilidades neste ofício.</p>
@@ -93,7 +94,7 @@
                                 <h5 class="card-title">Projeto 1
                                     <hr>
                                 </h5>
-                                <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
+                                <p class="card-text">Em breve!</p>
                                 <div><a href="#" class="btn btn-primary">Visitar <i
                                             class="fas fa-external-link"></i></a></div>
                             </div>
@@ -107,7 +108,7 @@
                                 <h5 class="card-title">Projeto 2
                                     <hr>
                                 </h5>
-                                <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
+                                <p class="card-text">Em breve!</p>
                                 <div><a href="#" class="btn btn-primary">Visitar <i
                                             class="fas fa-external-link"></i></a></div>
                             </div>
@@ -121,21 +122,21 @@
                                 <h5 class="card-title">Projeto 3
                                     <hr>
                                 </h5>
-                                <p class="card-text">Texto de apresentação contendo alguns detalhes sobre o projeto.</p>
+                                <p class="card-text">Em breve!</p>
                                 <div><a href="#" class="btn btn-primary">Visitar <i
                                             class="fas fa-external-link"></i></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item format-carousel-item active" id="contact-me">
-                    <div class="contact-title">
+                <div class="carousel-item format-carousel-item " id="contact-me">
+                    <div class="top-txt">
                         <h1><span class="block-appear"><span class="appear-txt">Contact-me</span></span>!</h1>
                     </div>
                     <div class="contact-wrap">
                         <div id="left-side-contact">
                             <div class="contact-link">
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fab fa-whatsapp-square"></i>
                                 <a href="https://wa.me/77991379957" target="_blank" title="Whatsapp">Whatsapp</a>
                             </div>
 
@@ -158,18 +159,18 @@
                                 <input type="email" name="email" class="e-input" required>
                                 <h5>Mensagem:</h5>
                                 <textarea name="message" id="e-content" required style="resize: none; height: 60px;"></textarea>
-                                <button type="submit" class="page-btn">Send</button>
+                                <button type="submit" class="page-btn">Enviar</button>
                                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/public/index.html">
                            </form>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" id="prev-arr" href="#main-slider" role="button" data-slide="prev">
-                    <span aria-hidden="true"><</span>
+                <a class="carousel-control-prev format-carousel-control" href="#main-slider" role="button" data-slide="prev">
+                    <span aria-hidden="true"><i class="far fa-caret-left"></i></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" id="next-arr" href="#main-slider" role="button" data-slide="next">
-                    <span aria-hidden="true">></span>
+                <a class="carousel-control-next format-carousel-control" href="#main-slider" role="button" data-slide="next">
+                    <span aria-hidden="true"><i class="far fa-caret-right"></i></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
@@ -177,9 +178,10 @@
     </main>
     <footer>Ademir Júnior &trade; 2024</footer>
     <nav id="mobile-nav">
-        <a href="">Sobre</a>
-        <a href="">Projetos</a>
-        <a href="">Contato</a>
+        <a id="format-a1-mob" href="">Home</a>
+        <a id="format-a2-mob" href="">Sobre</a>
+        <a id="format-a3-mob" href="">Projetos</a>
+        <a id="format-a4-mob" href="">Contato</a>
     </nav>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

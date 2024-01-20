@@ -13,16 +13,32 @@
 }
 
 *::selection {
-    background-color: var(--cyan-1);
-    color: var(--red-1);
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  
+*::-webkit-scrollbar-track {
+    background-color: var(--second-bg-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: var(--main-color);
+border-radius: 20px;
+border: 3px solid var(--second-bg-color);
 }
 
 body {
-    background-color: var(--black-3);
+    background-color: var(--main-bg-color);
 }
 
 i {
-    color: var(--cyan-1);
+    color: var(--main-color);
 }
 
 /* ELEMENTOS DO HEADER */
@@ -35,27 +51,28 @@ header {
     font-size: 26pt;
     font-weight: bold;
     font-family: 'Changa', sans-serif;
-    background-color: var(--black-2);
-    border: var(--lighter-black-border);
+    background-color: var(--second-bg-color);
+    border: var(--border-black);
 }
 
 header h1 {
-    color: var(--cyan-1);
-    text-shadow: var(--r-text-shadow);
+    color: var(--main-color);
+    text-shadow: var(--l-text-shadow);
     font-family: 'Sansita Swashed', system-ui;
-    font-size: 3vw;
+    font-size: 36pt;
     cursor: context-menu;
     position: relative;
 }
 
-#format-a1, #format-a2, #format-a3, #format-a4 {
+#format-a1, #format-a2, #format-a3, #format-a4,
+#format-a1-mob, #format-a2-mob, #format-a3-mob, #format-a4-mob {
     text-decoration: none;
     color: #fff;
     padding: 5px;
     display: inline-block;
     position: relative;
     margin-right: 10px;
-    font-size: 14pt;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -67,8 +84,8 @@ nav > a:after {
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: var(--cyan-1);
-    box-shadow: var(--r-text-shadow);
+    background-color: var(--main-color);
+    box-shadow: var(--l-text-shadow);
     transform-origin: bottom center;
     transition: transform 0.25s ease-out;
 }
@@ -85,7 +102,6 @@ nav > a:hover:after {
 .drop-btn {
     display: none;
     position: absolute;
-    border-radius: 50%;
     right: 20px;
 }
 
@@ -103,8 +119,8 @@ nav > a:hover:after {
     cursor: pointer;
     transition: all 300ms ease;
     color: #fff;
-    background-color: var(--black-2);
-    border: var(--lighter-white-border);
+    background-color: var(--second-bg-color);
+    border: var(--border-white);
 }
 
 #download-resume-link {
@@ -114,7 +130,7 @@ nav > a:hover:after {
 }
 
 .header-btn:hover, .page-btn:hover {
-    background-color: var(--black-3);
+    background-color: var(--main-bg-color);
 }
 
 /* CONTEÚDO PRINCIPAL */
@@ -125,13 +141,14 @@ nav > a:hover:after {
 }
 
 .format-carousel-item {
-    padding: 0px 200px;
+    padding: 0px 15vw;
     margin: 0 auto;
-    height: 500px;
+    height: 550px;
 }
 
-#prev-arr > span, #next-arr > span {
-    color: var(--cyan-1);
+.format-carousel-control {
+    transition: all 200ms ease-in-out;
+    color: var(--main-color);
     font-size: 4rem;
     font-weight: bolder;
 }
@@ -139,7 +156,7 @@ nav > a:hover:after {
 /* PARTE I */
 
 #first-page, #about-me, #my-projects, #contact {
-    color: #eee;
+    color: #fff;
     text-align: justify;
     font-family: 'Rajdhani', sans-serif;
 }
@@ -152,7 +169,7 @@ nav > a:hover:after {
 }
 
 #first-page-content h1 {
-    font-size: 7em;
+    font-size: 7vw;
 }
 
 #first-page-content h2 {
@@ -166,23 +183,23 @@ nav > a:hover:after {
     text-align: left;
 }
 
-.top-txt > h1, .contact-title >h1 {
+.top-txt > h1 {
     font-size: 6vw;
-    text-shadow: var(--r-text-shadow);
+    text-shadow: var(--l-text-shadow);
     font-family: 'Changa', sans-serif;
     cursor: context-menu;
     color: #fff;
 }
 
 .top-txt > h1 > span {
-    color: var(--cyan-1);
-    text-shadow: var(--r-text-shadow);
+    color: var(--main-color);
+    text-shadow: var(--l-text-shadow);
 }
 
 top-txt > h2 {
     font-size: 3vw;
     translate: 0px -25px;
-    text-shadow: var(--r-text-shadow);
+    text-shadow: var(--l-text-shadow);
 }
 
 .block-appear {
@@ -197,13 +214,13 @@ top-txt > h2 {
     left: 2px;
     width: inherit;
     height: 80%;
-    background-color: var(--red-1);
+    background-color: var(--second-color);
     animation: blockReveal 1.5s .5s both;
 }
 
 .appear-txt {
-    color: var(--cyan-1);
-    text-shadow: var(--r-text-shadow);
+    color: var(--main-color);
+    text-shadow: var(--l-text-shadow);
     font-family: 'Sansita Swashed', system-ui;
     opacity: 0;
     animation: fadeInTxt 0.5s ease-in-out 0.5s forwards;
@@ -246,12 +263,14 @@ top-txt > h2 {
     background-color: #fff;
     color: #000;
     margin: 20px 0px;
+    height: 380px;
     font-size: 15pt;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
+    overflow-y: scroll;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px var(--cyan-1);
+    box-shadow: 0px 0px 10px var(--main-color);
     animation: slideDownBox 1.4s ease-in 0s forwards;
     opacity: 0;
 }
@@ -270,13 +289,17 @@ top-txt > h2 {
 /* Projetos */
 .projects {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    overflow-x: scroll;
 }
 
 .card {
-    background-color: var(--black-2);
-    width: 18rem;
+    flex: 1 1 33%;
+    background-color: var(--second-bg-color);
+    max-width: 280px;
+    min-width: 240px;
+    height: 400px;
+    margin: 0px 10px 5px 5px;
 }
 
 .project-pic {
@@ -285,26 +308,29 @@ top-txt > h2 {
 
 #img-project {
     background-color: #fff;
-    width: 250px;
-    height: 250px;
+    max-width: 85%;
+    height: 100%;
     position: relative;
     top: 20px;
     left: 20px;
     cursor: pointer;
-    transition: transform 0.4s;
+    transition: transform ease 0.4s;
     border-radius: .4rem;
 }
 
 .project-pic:hover #img-project {
+    overflow: visible;
     transform: translateY(-15%);
+    box-shadow: 0px 2px 5px var(--main-color);
 }
 
 .card-body {
-    background-color: var(--black-2);
+    background-color: var(--second-bg-color);
     z-index: 1;
 }
 
 .card-title {
+    font-size: 14pt;
     font-weight: bold;
     display: flex;
     margin: 0;
@@ -329,49 +355,60 @@ top-txt > h2 {
     transition: all 300ms ease;
     color: #fff;
     font-weight: bold;
-    background-color: var(--black-2);
-    border: var(--lighter-white-border);
+    background-color: var(--second-bg-color);
+    border: var(--border-white);
 }
 
 .card-body > div > a:hover  {
-    background-color: var(--black-3);
-    border: var(--lighter-white-border);
+    background-color: var(--main-bg-color);
+    border: var(--border-white);
+}
+
+#scroll-projects {
+    background-color: #fff;
+    width: 100%;
+    height: 20px;
 }
 
 /* Contato */
-.contact-title h1 {
-    font-size:4.2vw;
+#contact-me h1 {
+    font-size: 5vw;
 }
 
 .contact-wrap {
     display: flex;
     justify-content: space-between;
-    height: 400px;
-    margin-top: 20px;
+    max-width: 900px;
+    min-width: 450px;
+    height: fit-content;
+    margin: 10px auto;
 }
 
 #left-side-contact, #right-side-contact{
-    background-color: var(--black-2);
+    background-color: var(--second-bg-color);
     width: 480px;
     border-radius: 15px;
     padding: 25px;
+    max-width: 440px;
+    min-width: 240px;
 }
 
 #left-side-contact {
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 }
 
 .contact-link {
     padding: 35px;
-    font-size: 2vw;
+    font-size: 20pt;
     cursor: pointer;
     transition: all 200ms ease-in-out;
 }
 
 .contact-link > i, .contact-link > a {
     text-decoration: none;
-    color: var(--cyan-1);
+    color: var(--main-color);
     transition: all 200ms ease-in-out;
 }
 
@@ -383,10 +420,11 @@ top-txt > h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 h5 {
-    font-size: 1vw;
+    font-size: 10pt;
     color: #fff;
 }
 
@@ -399,7 +437,7 @@ h5 {
 }
 
 .e-input:focus, #e-content:focus {
-    box-shadow: 0px 0px 10px var(--cyan-1);
+    box-shadow: 0px 0px 10px var(--main-color);
 }
 
 /* PARTE III */
@@ -412,7 +450,7 @@ h5 {
 
 .link {
     font-size: 26pt;
-    color: var(--cyan-1);
+    color: var(--main-color);
     margin: 0 5px;
     border-radius: 50%;
     transition: all 200ms ease-in-out;
@@ -434,27 +472,99 @@ footer {
     text-align: center;
     font-size: 12pt;
     color: #fff;
-    padding-top: 20px;
+    padding-top: 00px;
     padding-bottom: 20px;
 }
 
-/* MOBILE / RESPONSIVIDADE */
-
 #mobile-nav {
     display: none;
-    background-color: #202020;
-    color: #fff;
     text-shadow: var(--l-text-shadow);
-    border: var(--lighter-black-border);
+    margin-bottom: 20px;
 }
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 1185px) { /* projects session*/
+    .provects {
+        overflow-x: scroll;
+    }
+    
+    .card-title {
+        font-size: 12pt;
+    }
+    
+    .card-text {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 1000px) { /* contact session */
+    .contact-wrap {
+        overflow-x: scroll;
+        height: fit-content;
+    }
+    
+    #left-side-contact {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin-right: 0;
+    }
+
+    #right-side-contact {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-left: 0;
+    }
+
+    #right-side-contact > h2 {
+        font-size: 20pt;
+    }
+
+    .contact-link {
+        font-size: 16pt;
+    }
+}
+
+@media only screen and (max-width: 800px) { /* mobile */
+
+    #main-slider {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    #format-carousel {
+        height: 510px;
+    }
+
+    .format-carousel-item {
+        height: fit-content;
+    }
+
     /* Alterações no Header */
 
-    header>nav>a {
+    header > nav {
         display: none;
+    }
+    
+    #mobile-drop-btn {
+        display: block;
+        margin-top: 0;
+    }
+
+    .drop-btn {
+        display: block;
+        position: inherit;
+        background: none;
+        cursor: pointer;
+    }
+    .drop-btn:focus {
+        outline: none;
+    }
+    
+    .dropdown-content {
+        position: absolute;
+        right: 0px;
+        animation: slideDownBox 0.2s ease-in-out 0s forwards;
     }
 
     /* Alterações no conteúdo principal */
@@ -476,7 +586,7 @@ footer {
 
     footer {
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         padding: 0;
     }
     
