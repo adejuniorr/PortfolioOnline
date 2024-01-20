@@ -1,3 +1,5 @@
+// Botão dropdown da versão mobile
+
 document.body.addEventListener("click", function (event) {
     if (event.target.matches('.drop-btn') || event.target.matches('.drop-btn i')) {
         toggleDropdown();
@@ -20,7 +22,8 @@ function toggleDropdown() {
     dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 }
 
-// Header's Nav links
+
+// Links de navegação do header desktop e mobile
 
 function addClickListenerAndNavigate(id, index) {
     document.getElementById(id).addEventListener('click', (e) => {
